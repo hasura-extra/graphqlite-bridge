@@ -14,9 +14,10 @@ use GraphQL\Type\Definition\InputType;
 use GraphQL\Type\Definition\ResolveInfo;
 use TheCodingMachine\GraphQLite\Parameters\InputTypeParameterInterface;
 
-final class ArgNaming implements ArgNamingParameterInterface
+final class ArgNaming implements ArgNamingParameterInterface, WrappingParameterInterface
 {
     use ArgNamingParameterTrait;
+    use WrappingParameterTrait;
 
     public function __construct(
         string $name,
